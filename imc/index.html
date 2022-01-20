@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styce.css">
+    <title>IMC</title>
+</head>
+<body>
+
+    <header>
+
+        
+        <div class="container">
+            <h1>CALCULADORA DE IMC</h1>
+
+            <p class="texto">O IMC é reconhecido como padrão internacional para avaliar o grau de sobrepeso e obesidade.
+                 É calculado dividindo o peso (em kg) pela altura ao quadrado (em metros).</p>
+
+                 <span class="cite"><cite>IMC = Peso ÷ (Altura × Altura)</cite></span>
+
+                <p class="texto">Exemplo de como calcular o IMC: </p> 
+
+                 <span class="cite"><cite>IMC = 80 kg ÷ (1,80 m × 1,80 m) = 24,69 kg/m2 (Peso ideal)</cite></span>
+
+                 <p class="texto"> Utilize a calculadora abaixo para fazer o seu cálculo:</p>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="calculadora">
+        <h1>Calculadora</h1>
+
+        <div class="area">
+        <div class="sub">
+            <label for="pesolabel">Peso</label>
+            <input class="input" id="peso" type="number" value="" required placeholder="ex: 80" />
+        </div>
+      
+        <div class="sub">
+            <label for="alturalabel">Altura</label>
+            <input class="input" id="altura" type="number" value="" required placeholder="ex: 1,80" />
+        </div>
+
+        <p id="resultado"></p>
+    </div>
+       
+
+        <button id="btn" onclick="calcular()" >Calcular</button>
+        </div>
+
+    
+
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

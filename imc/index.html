@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,24 +8,25 @@
     <link rel="stylesheet" href="styce.css">
     <title>IMC</title>
 </head>
+
 <body>
 
     <header>
 
-        
+
         <div class="container">
             <h1>CALCULADORA DE IMC</h1>
 
             <p class="texto">O IMC é reconhecido como padrão internacional para avaliar o grau de sobrepeso e obesidade.
-                 É calculado dividindo o peso (em kg) pela altura ao quadrado (em metros).</p>
+                É calculado dividindo o peso (em kg) pela altura ao quadrado (em metros).</p>
 
-                 <span class="cite"><cite>IMC = Peso ÷ (Altura × Altura)</cite></span>
+            <span class="cite"><cite>IMC = Peso ÷ (Altura × Altura)</cite></span>
 
-                <p class="texto">Exemplo de como calcular o IMC: </p> 
+            <p class="texto">Exemplo de como calcular o IMC: </p>
 
-                 <span class="cite"><cite>IMC = 80 kg ÷ (1,80 m × 1,80 m) = 24,69 kg/m2 (Peso ideal)</cite></span>
+            <span class="cite"><cite>IMC = 80 kg ÷ (1,80 m × 1,80 m) = 24,69 kg/m2 (Peso ideal)</cite></span>
 
-                 <p class="texto"> Utilize a calculadora abaixo para fazer o seu cálculo:</p>
+            <p class="texto"> Utilize a calculadora abaixo para fazer o seu cálculo:</p>
 
         </div>
 
@@ -33,34 +35,70 @@
     <main>
 
         <div class="calculadora">
-        <h1>Calculadora</h1>
+            <h1>Calculadora</h1>
 
-        <div class="area">
-        <div class="sub">
-            <label for="pesolabel">Peso</label>
-            <input class="input" id="peso" type="number" value="" required placeholder="ex: 80" />
+            <div class="area">
+                <div class="sub">
+                    <label for="pesolabel">Peso</label>
+                    <input class="input" id="peso" type="number" value="" required placeholder="ex: 80" />
+                </div>
+
+                <div class="sub">
+                    <label for="alturalabel">Altura</label>
+                    <input class="input" id="altura" type="number" value="" required placeholder="ex: 1,80" />
+                </div>
+
+                <p id="resultado"></p>
+
+
+
+
+                <button id="btn" onclick="calcular()">Calcular</button>
+            </div>
+
         </div>
-      
-        <div class="sub">
-            <label for="alturalabel">Altura</label>
-            <input class="input" id="altura" type="number" value="" required placeholder="ex: 1,80" />
+
+        <div>
+            <table border="1">
+                <tr>
+                    <td>IMC</td>
+                    <td>CLASSIFICAÇÃO</td>
+                    <td>OBESIDADE (grau)</td>
+                </tr>
+                <tr>
+                    <td>MENOR QUE 18,5</td>
+                    <td>MAGREZA</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 18,5 E 24,9</td>
+                    <td>NORMAL</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>ENTRE 25,0 E 29,9</td>
+                    <td>SOBREPESO</td>
+                    <td>1</td>
+                </tr>
+
+            </table>
         </div>
 
-        <p id="resultado"></p>
-    </div>
-       
 
-        <button id="btn" onclick="calcular()" >Calcular</button>
-        </div>
-
-    
 
 
 
     </main>
 
+    <footer>
+
+
+
+    </footer>
+
 
 
     <script src="script.js"></script>
 </body>
+
 </html>

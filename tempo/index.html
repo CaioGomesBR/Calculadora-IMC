@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div id="tempo">
+
+            <div id="wrapper">
+                <h1 class="city"></h1>
+                <h2><span>0</span>ºC</h2>
+              </div>
+    
+            <script>
+                function getUserPosition() {
+      let url;
+      navigator.geolocation.getCurrentPosition((pos) => {
+        let lat = pos.coords.latitude;
+        let long = pos.coords.longitude;
+        url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=imperial&APPID=G9obJ9ZCa9n0pALZDp4NxjiBQfT6Yhuo`;
+        fetchApi(url);
+      });
+    }
+    
+    function fetchApi(url) {
+      let city = document.querySelector('.city');
+      let temp = document.querySelector('span');
+      fetch(url)
+      .then((data) => {
+        return data.json();
+      })
+      .then((data) => {
+        let tempInCelsius = ((5/9) * (data.main.temp-32)).toFixed(1);
+        city.innerText = `Hoje a temperatura em ${data.name} é:`;
+        temp.innerText = tempInCelsius;
+      })
+      .catch((err) => {
+        city.innerText = `Impossível acessar o OpenWeather. Verifique a sua conexão.`;
+        temp.innerText = `-`;
+        console.error()
+      })
+    }
+    
+    getUserPosition();
+            </script>
+            
+          
+    
+      
+    
+        </div>
+    </main>
+</body>
+</html>

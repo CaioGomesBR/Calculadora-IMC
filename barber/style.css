@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: 'Roboto', sans-serif; 
+    background: no-repeat;
+    background: fixed;
+    
+   
+}
+#menu-section {
+    background-color: black;
+    
+}
+
+#menu {
+    display: inline-block;
+   
+    
+
+}
+
+
+
+#menu-itens  >li {
+    display: inline-block;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+
+    color: aliceblue;
+    font-size: 20px;
+  
+}
+
+#container {
+
+    display: flex;
+    background-color: #1c1a2d ;
+    color: #f17e2e;
+    font-family: 'Roboto', sans-serif; 
+   justify-content: center;
+   line-break: 10px;
+    
+}
+
+#container > h1 {
+    font-size: 50px;
+}
+
+#titulo{
+   color:  #f17e2e;
+   font-weight:  900 Italic;
+}
+
+#lado-direito{
+    
+   /* background-image: url(./imagens/barber1.jpg);*/
+}
+
+#lado-esquerdo > h1{
+    font-size: 90px;
+    padding: 5px;
+
+}
+
